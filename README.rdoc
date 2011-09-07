@@ -1,6 +1,14 @@
 = Grcode
 
-Grcode is a plain simple wrapper for generating Qrcode images using Google API ( http://code.google.com/intl/es-ES/apis/chart/infographics/docs/qr_codes.html )
+Grcode is a plain simple wrapper for generating Qrcode images using Google API
+
+http://code.google.com/intl/es-ES/apis/chart/infographics/docs/qr_codes.html
+
+== Installation
+
+Like other ruby gems, add it to your Gemfile or run
+
+  > gem install 'grcode'
 
 == How to use it
 
@@ -22,13 +30,18 @@ Along with the string to encode, you can pass some other options that Google API
 * Correction
 * Margin
 
-Some more examples:
+Check out the options here: http://code.google.com/intl/es-ES/apis/chart/infographics/docs/qr_codes.html
+
+Some more examples with the options:
+
+=== Size
 
   >> qr = Grcode::QRCode.new('Hello world of ruby lovers!', {:size => 300})
   => #<Grcode::QRCode:0x100520138 @url="https://chart.googleapis.com/chart?cht=qr&chl=Hello world of ruby lovers!&chs=300x300">
   >> qr.url
   => "https://chart.googleapis.com/chart?cht=qr&chl=Hello world of ruby lovers!&chs=300x300"
 
+=== Margin
   >> qr = Grcode::QRCode.new('Hello world of ruby lovers!', {:size => 300, :margin => 5})
   => #<Grcode::QRCode:0x100513bb8 @url="https://chart.googleapis.com/chart?cht=qr&chld=L|5&chl=Hello world of ruby lovers!&chs=300x300">
   >> qr.url
