@@ -6,14 +6,12 @@ Grcode is a plain simple wrapper for generating Qrcode images using Google API (
 
 A piece of code worth 1000 words :)
 
-<code>
->> require 'grcode'
-=> true
->> qr = Grcode::QRCode.new('Hello world of ruby lovers!')
-=> #<Grcode::QRCode:0x100522af0 @url="https://chart.googleapis.com/chart?cht=qr&chl=Hello world of ruby lovers!&chs=150x150">
->> qr.url
-=> "https://chart.googleapis.com/chart?cht=qr&chl=Hello world of ruby lovers!&chs=150x150"
-</code>
+	>> require 'grcode'
+	=> true
+	>> qr = Grcode::QRCode.new('Hello world of ruby lovers!')
+	=> #<Grcode::QRCode:0x100522af0 @url="https://chart.googleapis.com/chart?cht=qr&chl=Hello world of ruby lovers!&chs=150x150">
+	>> qr.url
+	=> "https://chart.googleapis.com/chart?cht=qr&chl=Hello world of ruby lovers!&chs=150x150"
 
 == Options
 
@@ -26,16 +24,13 @@ Along with the string to encode, you can pass some other options that Google API
 
 Some more examples:
 
-<code>
->> qr = Grcode::QRCode.new('Hello world of ruby lovers!', {:size => 300})
-=> #<Grcode::QRCode:0x100520138 @url="https://chart.googleapis.com/chart?cht=qr&chl=Hello world of ruby lovers!&chs=300x300">
->> qr.url
-=> "https://chart.googleapis.com/chart?cht=qr&chl=Hello world of ruby lovers!&chs=300x300"
-</code>
+	>> qr = Grcode::QRCode.new('Hello world of ruby lovers!', {:size => 300})
+	=> #<Grcode::QRCode:0x100520138 @url="https://chart.googleapis.com/chart?cht=qr&chl=Hello world of ruby lovers!&chs=300x300">
+	>> qr.url
+	=> "https://chart.googleapis.com/chart?cht=qr&chl=Hello world of ruby lovers!&chs=300x300"
 
-<code>
->> qr = Grcode::QRCode.new('Hello world of ruby lovers!', {:size => 300, :margin => 5})
-=> #<Grcode::QRCode:0x100513bb8 @url="https://chart.googleapis.com/chart?cht=qr&chld=L|5&chl=Hello world of ruby lovers!&chs=300x300">
->> qr.url
-=> "https://chart.googleapis.com/chart?cht=qr&chld=L|5&chl=Hello world of ruby lovers!&chs=300x300"
-</code>
+	>> qr = Grcode::QRCode.new('Hello world of ruby lovers!', {:size => 300, :margin => 5})
+	=> #<Grcode::QRCode:0x100513bb8 @url="https://chart.googleapis.com/chart?cht=qr&chld=L|5&chl=Hello world of ruby lovers!&chs=300x300">
+	>> qr.url
+	=> "https://chart.googleapis.com/chart?cht=qr&chld=L|5&chl=Hello world of ruby lovers!&chs=300x300"
+
