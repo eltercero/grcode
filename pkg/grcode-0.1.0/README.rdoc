@@ -1,3 +1,0 @@
-= Grcode
-
-Plain simple wrapper for generating Qrcode images using Google API ( http://code.google.com/intl/es-ES/apis/chart/infographics/docs/qr_codes.html )
